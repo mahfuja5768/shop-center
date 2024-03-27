@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const CustomLink = ({ path, children }) => {
   const pathname = usePathname();
+  console.log(pathname);
   const active = pathname === path;
 
   return (
@@ -12,9 +13,7 @@ const CustomLink = ({ path, children }) => {
       className={active ? "border-b border-black box-border inline-block" : ""}
       href={path}
     >
-      <button className="hover:border-b border-black block h-6 box-border mt-5">
         {children}
-      </button>
     </Link>
   );
 };
