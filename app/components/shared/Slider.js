@@ -1,11 +1,7 @@
 "use client";
 
-/* eslint-disable jsx-a11y/alt-text */
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import logo from "/public/assets/svg/plus.svg";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -21,7 +17,7 @@ const Slider = ({ images = [] }) => {
     <>
       <Swiper
         style={{
-          "--swiper-navigation-color": "#fff",
+          "--swiper-navigation-color": "#6B7280",
           "--swiper-pagination-color": "#fff",
         }}
         loop={true}
@@ -51,7 +47,7 @@ const Slider = ({ images = [] }) => {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
+        className="mySwiper flex gap-4 mt-4"
       >
         {images.map((image, idx) => (
           <SwiperSlide key={idx}>

@@ -2,11 +2,6 @@ import CustomLink from "../components/shared/CustomLink";
 import Footer from "../components/shared/Footer";
 import Newsletter from "../components/shared/Newsletter";
 
-export const metadata = {
-  title: "Category Page",
-  description: "This is our DashboardLayout page",
-};
-
 export default function CategoryLayout({ children }) {
   const items = [
     "All",

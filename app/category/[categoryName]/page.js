@@ -1,9 +1,13 @@
 import ProductItem from "@/app/components/ProductItem";
 import products from "@/app/data/products";
 
+export const metadata = {
+    title: "Shop-Center || Category Page",
+    description: "This is our Category Page",
+  };
+
 export default function CategoryProducts({ params }) {
   const { categoryName } = params;
-  console.log(categoryName);
  
 
   const categoryProducts = products.filter(

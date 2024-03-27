@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 
 const CustomLink = ({ path, children }) => {
   const pathname = usePathname();
-  console.log(pathname);
   const active = pathname === path;
 
   return (
