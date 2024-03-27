@@ -1,11 +1,10 @@
+import Link from "next/link";
+
 export default function ProductItem({ product }) {
   const {
-    images,
+    id,
     thumbnail,
-    brand,
     category,
-    stock,
-    rating,
     discountPercentage,
     price,
     description,
@@ -23,17 +22,17 @@ export default function ProductItem({ product }) {
         style={backgroundImageStyle}
       ></div>
       <h2 className="text-sm lg:text-base mt-2">
-        <a className="text-base font-bold" href="./productPage.html">
+        <Link href={`/products/${id}`} className="text-base font-bold">
           {title}
-        </a>
+        </Link>
         <span className="text-[#919090]">
-          <a href="./category.html">({category})</a>
+          <Link href={`/category/${category}`}>({category})</Link>
         </span>
       </h2>
       <p className="text-[#919090] text-sm ">{description}</p>
       <p className="text-rose-600 text-sm mt-4">
         <span className="text-[#919090] line-through">${price}</span> $
-        {price - price * (discountPercentage / 100)}
+        {(price - price * (discountPercentage / 100)).toFixed(2)}
       </p>
     </div>
   );
