@@ -1,9 +1,9 @@
-const CategoryLoading = () => {
+const ProductsLoading = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <h2 className="text-xl">Loading....</h2>
     </div>
   );
 };
 
-export default CategoryLoading;
+export default ProductsLoading;
